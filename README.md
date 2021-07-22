@@ -1,14 +1,4 @@
-<p align="center">
-  <a href="https://ant.design">
-    <img width="200" src="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg">
-  </a>
-</p>
-
-<h1 align="center">Ant Design</h1>
-
-<div align="center">
-
-一套企业级 UI 设计语言和 React 组件库。
+这是使用node的快速应用框架express构建的web网站。
 
 [![CI status][github-action-image]][github-action-url] [![codecov][codecov-image]][codecov-url] [![NPM version][npm-image]][npm-url] [![NPM downloads][download-image]][download-url]
 

@@ -16,13 +16,41 @@
 
 <body>
     <div class="root_Index">
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">home</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Hot</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-expanded="false">
+                            Navigation
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="http://localhost:3000/static/images/壁纸.jpg">Look a pic</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">About me</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- jumbotron -->
         <div class="jumbotron">
             <h1 class="display-4">Wellcome To Yao.Xiao's Web!</h1>
             <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention
                 to featured content or information.</p>
             <hr class="my-4">
             <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-            <button onclick="toLogin()" type="button" class="btn btn-info">No login? Click here to</button>
+            <button onclick="toLogin()" type="button" class="btn btn-info">No login? Click me</button>
         </div>
     </div>
 

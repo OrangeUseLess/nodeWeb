@@ -1,0 +1,13 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.jumbotron{
+    background-image: url('https://500px.com/staticV2/media/homefeed_banner.f8220fff.jpg');
+    background-size: cover;
+}
+

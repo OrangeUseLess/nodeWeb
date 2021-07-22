@@ -1,0 +1,94 @@
+body {
+    background-image: url("http://localhost:3000/static/images/login_bgimg.jpg");
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.login_box {
+    width: 320px;
+    height: 400px;
+    background: white;
+    border-radius: 10px;
+    opacity: 0.9;
+}
+
+form{
+    height: 100%;
+}
+
+/* title */
+.login_title {
+    height: 20%;
+    font-size: 30px;
+    font-family: 黑体;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 账号栏 */
+.login_account,
+.login_password {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.account_lable,
+.password_lable {
+    font-size: 14px;
+    font-family: ui-monospace;
+}
+
+/* input style */
+input,
+input:active {
+    outline: none;
+    border: unset;
+    border-bottom: 1px solid #ccc;
+}
+
+/* button */
+.login_buttons {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+button:nth-child(1) {
+    background: #62b36c;
+}
+
+button {
+    width: 30%;
+    border: unset;
+    background: #5399a9;
+    height: 22%;
+    border-radius: 20px;
+    color: white;
+    font-size: 10px;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+
+/* options */
+.login_options {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 10px;
+}
+.options_item {
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="http://localhost:3000/static/src/login/login.index.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="login_box animate__animated animate__flipInX">
+        <form id="form" name="form" onsubmit="return false">
+            <div class="login_title">LOGIN IN</div>
+            <div class="login_account">
+                <div class="account_lable">account</div>
+                <div class="account_input">
+                    <input name="account" placeholder="Phone/Email" />
+                </div>
+            </div>
+            <div class="login_password">
+                <div class="password_lable">password</div>
+                <div class="password_input">
+                    <input name="password" placeholder="Be Careful" type="password" />
+                </div>
+            </div>
+            <div class="login_buttons">
+                <button>Register</button>
+                <button onclick="getFormData()" type="button">Login</button>
+            </div>
+            <div class="login_options">
+                <div class="options_item"><input name="remenber" type="checkbox">记住此次登陆</div>
+                <div class="options_item"><input name="consent" type="checkbox">
+                    同意我们的条款，
+                    <a href="https://github.com/OrangeUseLess">阅读条款</a>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // 得到表单数据
+        // 进行了简单的数据验证
+        const getFormData = () => {
+            let dom = document.forms[0];
+            let formData = new FormData(dom);
+            if (formData.get('account') === "") { //账号不能为空 
+                let dom = document.getElementsByClassName('login_account')[0];
+                dom.classList.add('animate__animated', 'animate__shakeX');
+                setTimeout(() => {
+                    dom.classList.remove('animate__animated', 'animate__shakeX');
+                }, 1000)
+                return;
+            } else if (formData.get('password') === "") {  // 密码不能为空
+                let dom = document.getElementsByClassName('login_password')[0];
+                dom.classList.add('animate__animated', 'animate__shakeX');
+                setTimeout(() => {
+                    dom.classList.remove('animate__animated', 'animate__shakeX');
+                }, 1000)
+                return;
+            } else if (formData.get('consent') === null) { // 需要勾选同意条款
+                let dom = document.getElementsByClassName('options_item')[1];
+                dom.classList.add('animate__animated', 'animate__shakeX');
+                setTimeout(() => {
+                    dom.classList.remove('animate__animated', 'animate__shakeX');
+                }, 1000)
+                return;
+            }
+            postFormData(formData);
+        }
+
+        // post formData
+        const postFormData = (formData) => {
+            const xhr = new XMLHttpRequest();
+            xhr.open("POST", 'http://rap2api.taobao.org/app/mock/287398/example/1626850254630', true);
+            xhr.send(formData);
+            xhr.onreadystatechange = function (e) {
+                if (xhr.status == 200 && xhr.responseText) {
+                    let result = JSON.parse(xhr.responseText);
+                    alert('wellcome,' + result.userName);
+                    window.location.href = 'http://localhost:3000/static/src/index/index.html';
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

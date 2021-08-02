@@ -37,7 +37,7 @@ cd 到 文件根目录，运行 node server.js
 ## 🎁 访问
 
 ```
-通过 浏览器localhost:3000 访问即可。网站首页 http://localhost:3000/static/src/index/index.html
+通过 浏览器localhost:3000 访问即可。
 ```
 
 

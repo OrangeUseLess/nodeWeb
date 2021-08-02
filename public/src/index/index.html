@@ -41,6 +41,17 @@
                         <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">About me</a>
                     </li>
                 </ul>
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <input type="text" class="form-control nav-serachInput"
+                            onkeypress="return searchInputEnterFunc(event)" placeholder="Search NodeWeb" />
+                    </li>
+                    <li class="nav-item">
+                        <figure class="figure">
+                            <img src="http://localhost:3000/static/images/userpic.png" class="figure-img img-fluid rounded" alt="..." />
+                        </figure>
+                    </li>
+                </ul>
             </div>
         </nav>
 
@@ -107,6 +118,15 @@
         // click button
         const toLogin = () => {
             window.location.href = 'http://localhost:3000/static/src/login/login.index.html';
+        }
+
+        // search enter func
+        const searchInputEnterFunc = (e) => {
+            // console.log(e);
+            const { keyCode } = e;
+            if (keyCode !== 13) return;
+            alert("search vaue：" + $('.nav-serachInput').val());
+            $('.nav-serachInput').val("");
         }
     </script>
 </body>

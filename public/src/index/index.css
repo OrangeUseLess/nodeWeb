@@ -7,31 +7,51 @@ body {
     overflow-x: hidden;
 }
 
-.root_Index{
+.root_Index {
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
 }
 
 /* 导航 */
-.navbar{
+.navbar {
     width: 100vw;
     position: fixed !important;
     top: 0;
+    height: 50px;
 }
 
+.navbar-nav {
+    width: 20vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.navbar input {
+    border-radius: 20px;
+}
+.navbar .nav-item img {
+    width: 35px;
+    border-radius: 2rem !important;
+    margin-bottom: unset;
+}
+.navbar .nav-item .figure{
+    margin:  unset;
+}
+
+
 /* 巨幕 */
-.jumbotron{
-    background-image: url('https://500px.com/staticV2/media/homefeed_banner.f8220fff.jpg');
+.jumbotron {
+    background-image: url("https://500px.com/staticV2/media/homefeed_banner.f8220fff.jpg");
     background-size: cover;
     width: 90vw;
+    margin-top: 50px;
 }
 
 /* 一些提示文字 */
-.tips-message{
+.tips-message {
     font-size: 16px;
     letter-spacing: 0px;
     text-transform: none;
@@ -42,12 +62,12 @@ body {
 }
 
 /* 分割线 */
-.decollator{
-    width: 90vw
+.decollator {
+    width: 90vw;
 }
 
 /* 卡片内容 */
-.cart-content{
+.cart-content {
     display: flex;
     width: 90vw;
     justify-content: space-between;

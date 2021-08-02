@@ -23,7 +23,7 @@
 ```bash
 npm install 
 ```
-
+或者
 ```bash
 yarn
 ```

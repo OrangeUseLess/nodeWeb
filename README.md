@@ -42,7 +42,7 @@ cd 到 文件根目录，运行 node server.js
 
 ## 🌍 如果没有成功
 
-可能是设置的端口号被占了，可以打开 server.js 文件，修改 port 的值。
+可能是设置的3000端口被你系统中的其他应用占了，可以打开 server.js 文件，修改 port 的值，然后重新运行 node server.js
 
 
 ## ❤️ 点个赞吧

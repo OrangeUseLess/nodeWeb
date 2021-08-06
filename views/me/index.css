@@ -27,7 +27,8 @@ video#bgvid {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #656161;
+    background: #807e7e;
+    opacity: 0.6;
 }
 .conten-text {
     width: 80%;
